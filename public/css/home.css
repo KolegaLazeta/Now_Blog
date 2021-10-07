@@ -1,0 +1,96 @@
+
+body{
+  font-family: 'Mukta', sans-serif;
+	height:100vh;
+	min-height:550px;
+	background-image: url("/img/header.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position:center;
+	position:relative;
+  background-attachment: fixed;
+}
+
+.pr-3{
+  background-color: #ed3015; 
+  border-style:none
+}
+.font{
+  color:white; 
+  font-size: 20px
+}
+.fonts{
+font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.headline {
+    padding-top: 100px;
+    position: relative;
+    height: 550px;
+    color: #fff;
+    text-align: center;
+    background-color: white;
+    margin:70px;
+    border-radius: 25px;
+  
+  }
+  .headline:after {
+  
+    border-radius: 25px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.5);
+  }    
+  .cards{
+    padding-top: 50px;
+    position: relative;
+    height: 570px;
+    color: black;
+    text-align: center;
+    background-color: white;
+    margin:70px;
+    border-radius: 25px;
+    
+  }
+  .ourmision{
+    position: relative;
+    height: 570px;
+    color: black;
+    text-align: center;
+    background-color: white;
+    margin:80px;
+    border-radius: 25px;
+  }
+ .team{
+
+  position: relative;
+  height: 550px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+ 
+  margin:70px;
+  border-radius: 25px;
+}
+.img-thumbnail {
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.social-link {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
