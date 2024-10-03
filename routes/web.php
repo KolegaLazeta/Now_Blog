@@ -33,6 +33,9 @@ Auth::routes();
 //Comments
 Route::post('/comment', [\App\Http\Controllers\CommentController::class, 'store'])->name('comment.store');
 
+//Posts
+Route::get('/newpost', [\App\Http\Controllers\PostController::class, 'create'])->name('create.post');
+Route::post('/post/store', [\App\Http\Controllers\PostController::class, 'store'])->name('store.post');
 
 
 Route::middleware(['roles:admin', 'auth'])->group(function () {
@@ -51,8 +54,8 @@ Route::middleware(['roles:admin', 'auth'])->group(function () {
     Route::delete('/admin/comment/delete/{comment}', [\App\Http\Controllers\CommentController::class, 'destroy'])->name('comment.destroy');
 
     //Posts
-    Route::get('/admin/post', [\App\Http\Controllers\PostController::class, 'index']);
-    Route::get('/admin/posts/create', [\App\Http\Controllers\PostController::class, 'create']);
-    Route::post('/admin', [\App\Http\Controllers\PostController::class, 'store']);
-    Route::delete('/admin/post/delete/{post}',[\App\Http\Controllers\PostController::class, 'destroy'])->name('post.destroy');
+    Route::get('/admin/post', [\App\Http\Controllers\AdminController::class, 'listPosts']);
+    Route::get('/admin/posts/create', [\App\Http\Controllers\AdminController::class, 'create']);
+    Route::post('/admin', [\App\Http\Controllers\AdminController::class, 'store'])->name('admin.post.store');
+    Route::delete('/admin/post/delete/{post}',[\App\Http\Controllers\AdminController::class, 'destroy'])->name('post.destroy');
 });

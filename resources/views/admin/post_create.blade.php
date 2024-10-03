@@ -3,7 +3,7 @@
 
 <div class="container">
     
-    <form action="/admin" enctype="multipart/form-data" method="post">
+    <form action="{{ route('admin.post.store') }}" enctype="multipart/form-data" method="POST">
         @csrf   
 
         <div class="row">
@@ -12,6 +12,12 @@
                 <div class="row">
                     <h2> Dodaj Objavu </h2>
                 </div>
+                
+                <input id="user_id" type="user_id" class="form-control" 
+                name="user_id" 
+                value="{{old('userId')}}"  
+                autocomplete="user_id" autofocus hidden>
+                
                 <div class="form-group row">
                     <label for="title" class="col-md-4 col-form-label">Naslov Objave</label>
      

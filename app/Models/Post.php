@@ -17,5 +17,9 @@ class Post extends Model
         return $this->hasMany('App\Models\Comment');
     }
     
-    protected $fillable = ['title', 'author', 'image', 'description', 'longtext', 'category_id' ];
+    public function userId(){
+        return $this->hasOne('App\Models\User');
+    }
+
+    protected $fillable = ['title', 'author', 'image', 'description', 'longtext', 'category_id', 'userId' ];
 }

@@ -35,7 +35,7 @@ class CategoryController extends Controller
 
             Categories::create($data);
         
-        return redirect(url('/admin'));
+        return redirect(url('/home'));
     }
 
     public function destroy(Categories $category){
@@ -53,13 +53,8 @@ class CategoryController extends Controller
     public function show(Categories $id){
         
         $categories = Categories::all();
- 
-
         $posts = Post::where('category_id', ($id->id))->latest()->get();
-
         return view('categories.show' ,compact('posts', 'categories'));
-         
-
     }
     
 }
